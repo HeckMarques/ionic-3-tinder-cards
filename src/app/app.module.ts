@@ -7,19 +7,25 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 
+//tinder cards
+import { HttpModule } from '@angular/http';
+import { SwingModule } from 'angular2-swing';
+
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage, 
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp)
+    IonicModule.forRoot(MyApp),
+    HttpModule,
+    SwingModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage
+    HomePage,
   ],
   providers: [
     StatusBar,

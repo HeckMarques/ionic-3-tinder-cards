@@ -1,14 +1,46 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      Ionic 3 Tinder Cards
     </ion-title>
+
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will be your guide.
-  </p>
+  <div swing-stack #myswing1 [stackConfig]="stackConfig" (throwoutleft)="voteUp(false)" (throwoutright)="voteUp(true)" id="card-stack">
+    <ion-card #mycards1 swing-card *ngFor="let c of cards">
+      <ion-item [ngClass]="{'transparent' : ok == true}" *ngIf="c.name">
+        <ion-icon item-start name="ios-contact" color="primary"></ion-icon>
+        <label style="font-size: 15px; color:#488aff">
+          {{ c.name.first }} {{ c.name.last}}</label>
+      </ion-item>
+
+      <img *ngIf="c.picture" [src]="c.picture.large">
+      <div align="center" *ngIf="c.location" [ngClass]="{'white' : ok != true}" [ngClass]="{'transparent' : ok == true}">
+        <label style="font-size: 15px; color:#488aff">
+          From: {{c.location.city}}, {{c.location.postcode}}</label>
+      </div>
+      <div align="center" *ngIf="c.name">
+        <ion-row>
+          <ion-col>
+            <button ion-button icon-end small clear (click)="voteUp(false)">
+              <p style="color:#f53d3d;">Deslike</p>
+              <ion-icon name="thumbs-down" color="danger"></ion-icon>
+            </button>
+          </ion-col>
+          <ion-col>
+            <button ion-button icon-start small clear (click)="voteUp(true)">
+              <ion-icon name="thumbs-up" color="secondary"></ion-icon>
+              <p style="color:#32db64;">Like</p>
+            </button>
+          </ion-col>
+        </ion-row>
+      </div>
+
+    </ion-card>
+  </div>
+
+  <p style="text-align: center; width: 100%;">{{ recentCard }}</p>
+
 </ion-content>

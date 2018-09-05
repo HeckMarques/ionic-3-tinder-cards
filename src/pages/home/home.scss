@@ -1,3 +1,36 @@
 page-home {
+    #card-stack {
+        width: 95%;
+        height: 450px;
+        background: #cce0ff; 
+        border: 10px solid #488aff;
+        margin: 1px auto 0;
+        position: relative;
+      }
+      .transparent{
+          background-color: rgba(255, 255, 255, 0);
+          
+      }
+      .white{
+        background-color:#fff
+      }
+      .transparenttext{
+        background:rgba(255, 255, 255, 0);
+        font-size: 14px; 
+        color:#488aff;
+      }
 
+      .whitetext{
+        background:#fff;
+        font-size: 14px; 
+        color:#488aff
+      }
+     
+      #card-stack ion-card {
+        border-radius: 5px;
+        position: absolute;
+        text-align: center;
+        top: 3%;
+        height: 90%;
+      }
 }
