@@ -16,7 +16,7 @@
           {{ c.name.first }} {{ c.name.last}}</label>
       </ion-item>
 
-      <img *ngIf="c.picture" [src]="c.picture.large">
+      <img *ngIf="c.picture" draggable="false" style="-moz-user-select: none;" [src]="c.picture.large">
       <div align="center" *ngIf="c.location" [ngClass]="{'white' : ok != true}" [ngClass]="{'transparent' : ok == true}">
         <label style="font-size: 15px; color:#488aff">
           From: {{c.location.city}}, {{c.location.postcode}}</label>
