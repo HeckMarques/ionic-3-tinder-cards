@@ -2,7 +2,7 @@
 Example Ionic Tinder Cards Using Angular 2 Swing
 
 # Demo live:
-https://mauriciomarques3809.github.io/ionic-3-tinder-cards/
+[https://mauriciomarques3809.github.io/ionic-3-tinder-cards/](https://heckmarques.github.io/ionic-3-tinder-cards/)
 
 # This example is based on the devdactic tutorial.
 However with some adjustments in the layout and correction of a bug that left the letters of the cards shuffled.
